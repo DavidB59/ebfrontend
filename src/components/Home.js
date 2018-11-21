@@ -20,21 +20,23 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-
+      
       <h1>Welcome to class!</h1>
       <ul>
         {!this.props.objectlist ? <p> Loading.... </p> : 
-        this.props.objectlist.oos.map(object => <li key={object.id}> 
+        this.props.objectlist.map(object => 
+          <Link to={ `/object/${object.id} ` }>
+        <li key={object.id}> 
          {`${object.title} ${object.price} `}
    
-        </li> )}
+        </li> </Link>)}
          </ul>
          <Link to='/sell'><button> Sell an object </button> </Link>
       </div>
 
     )
   }
-}
+}   
 
 
 const mapStateToProps = state => ({
@@ -43,3 +45,9 @@ const mapStateToProps = state => ({
 
 
 export default connect(mapStateToProps, {loadOOSlist})(Home)
+
+
+
+
+
+
