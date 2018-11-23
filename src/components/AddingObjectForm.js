@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function AddingObjectForm(props) {
   return (<div>
-    <h1> Adding Object From </h1>
+    <h3> Add an item to sell </h3>
 
 { <form onSubmit={props.onSubmit}>
    <label>

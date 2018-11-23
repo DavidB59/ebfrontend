@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 class ObjectDetailsContainer extends React.Component {
   componentDidMount() {
+    console.log(this.props.match)
     this.props.loadObject(Number(this.props.match.params.id))
   }
 

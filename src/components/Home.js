@@ -21,13 +21,13 @@ class Home extends React.Component {
     return (
       <div>
       
-      <h1>Welcome to class!</h1>
+      <h1>List of items</h1>
       <ul>
         {!this.props.objectlist ? <p> Loading.... </p> : 
         this.props.objectlist.map(object => 
-          <Link to={ `/object/${object.id} ` }>
+          <Link to={ `/object/${object.id}` }>
         <li key={object.id}> 
-         {`${object.title} ${object.price} `}
+         {`Title ${object.title} Price ${object.price} € `}
    
         </li> </Link>)}
          </ul>
